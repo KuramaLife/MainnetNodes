@@ -82,6 +82,7 @@ cd $HOME
 ```bash
 systemctl enable bifrost.service
 systemctl start bifrost.service
+systemctl status bifrost.service
 ```
 
 ## Check the logs

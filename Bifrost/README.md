@@ -89,3 +89,11 @@ systemctl status bifrost.service
 ```bash
 journalctl -u bifrost.service -f -o cat
 ```
+
+## Delete node
+```bash
+sudo systemctl stop bifrost.service
+sudo rm /etc/systemd/system/bifrost.service
+sudo systemctl disable bifrost.service
+rm -rf /var/lib/bifrost-data
+```

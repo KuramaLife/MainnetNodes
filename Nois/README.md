@@ -10,7 +10,7 @@
 
 **Chain ID:** nois-1 | **Latest Version:** v1.0.3 | **Custom Port:** 37
 
-## Install Node Guide Gitopia
+## Install Node Guide Nois
 
 :red_circle:Specify the name of your moniker (validator) which will be visible in the explorer
 

@@ -90,9 +90,9 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.gitopia/config/config
 ## Setting custom ports (optional)
 
 ```bash
-BANKSY_PORT=36
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${BANKSY_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://0.0.0.0:${BANKSY_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${BANKSY_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${BANKSY_PORT}656\"%; s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${BANKSY_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${BANKSY_PORT}660\"%" $HOME/.gitopia/config/config.toml
-sed -i.bak -e "s%:1317%:${BANKSY_PORT}317%g; s%:8080%:${BANKSY_PORT}080%g; s%:9090%:${BANKSY_PORT}090%g; s%:9091%:${BANKSY_PORT}091%g; s%:8545%:${BANKSY_PORT}545%g; s%:8546%:${BANKSY_PORT}546%g; s%:6065%:${BANKSY_PORT}065%g" $HOME/.gitopia/config/app.toml
+CUSTOM_PORT=36
+sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.gitopia/config/config.toml
+sed -i.bak -e "s%:1317%:${CUSTOM_PORT}317%g; s%:8080%:${CUSTOM_PORT}080%g; s%:9090%:${CUSTOM_PORT}090%g; s%:9091%:${CUSTOM_PORT}091%g; s%:8545%:${CUSTOM_PORT}545%g; s%:8546%:${CUSTOM_PORT}546%g; s%:6065%:${CUSTOM_PORT}065%g" $HOME/.gitopia/config/app.toml
 ```
 
 ## Create service
